@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Diary - Journal 🌸</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="bg-pink-gradient">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-text">Dear Diary</span> 🌸
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="todo.html">To-Do</a></li>
+                    <li class="nav-item"><a class="nav-link" href="expenses.html">Expenses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="goals.html">Goals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="journal.html">Journal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login 💖</a></li>
+                    <li class="nav-item">
+                        <button id="modeToggle" class="btn btn-link">
+        <span id="modeIcon">🌞</span>
+    </button>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" id="logout" href="#" style="display: none;">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Journal Card -->
+    <div class="container mt-5 pt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card glassy-card animate-scale-in decorated-border">
+                    <div class="card-body lined-paper">
+                        <div class="title-bar mb-3" style="font-family: 'Pacifico', cursive; font-size: 2rem;">Dear Diary 🌸</div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control mb-2" id="journalTitle" placeholder="Enter a cute little title💖...">
+                            <textarea class="form-control" id="journalTextArea" rows="10" placeholder="Write your thoughts here🌸..."></textarea>
+                            <button class="btn btn-primary btn-bounce mt-2" id="addJournalBtn"><i class="fas fa-plus"></i> Add Entry</button>
+                        </div>
+                        <div id="journalSpinner" class="spinner-border text-light mt-3 d-none" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div id="journalAlert" class="alert alert-danger mt-3 d-none" role="alert"></div>
+                        <h4 class="mt-4" style="font-family: 'Pacifico', cursive; ">Past Entries 🔎</h4>
+                        <div id="pastEntries"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2025 Dear Diary. Crafted with love 💖</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../journal.js"></script>
+    <script src="../theme.js"></script>
+</body>
+</html>
